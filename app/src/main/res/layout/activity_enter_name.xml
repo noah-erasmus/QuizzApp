@@ -43,6 +43,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_edit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Your name">
@@ -52,6 +53,7 @@
         </com.google.android.material.textfield.TextInputLayout>
         
         <Button
+            android:id="@+id/name_enter"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="Enter"
