@@ -89,6 +89,7 @@
         </LinearLayout>
         
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/onewordtitles"
             android:layout_width="350dp"
             android:layout_height="100dp"
             app:cardElevation="10dp"

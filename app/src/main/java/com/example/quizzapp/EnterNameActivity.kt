@@ -7,14 +7,12 @@ import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_enter_name.*
 
 class EnterNameActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_enter_name)
-
-        val name_enter = findViewById<Button>(R.id.name_enter)
-        val name_edit = findViewById<TextView>(R.id.name_edit)
 
         name_enter.setOnClickListener{
 
