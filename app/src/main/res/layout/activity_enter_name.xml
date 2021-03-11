@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:textSize="30sp"
             android:text="Welcome to FilmQuiz!">
 
         </TextView>
@@ -26,6 +27,12 @@
             android:layout_gravity="center"
             app:cardCornerRadius="150dp"
             android:layout_margin="50dp">
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:src="@drawable/red_film"></ImageView>
 
         </androidx.cardview.widget.CardView>
 
