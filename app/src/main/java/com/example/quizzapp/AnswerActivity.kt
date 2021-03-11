@@ -2,6 +2,8 @@ package com.example.quizzapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.RadioButton
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_answer.*
 
 class AnswerActivity : AppCompatActivity() {
@@ -22,5 +24,16 @@ class AnswerActivity : AppCompatActivity() {
 
         progressbar.progress = questionNumber
         progress.text = "$questionNumber" + "/" + questionslist.size
+
+        var answer: RadioButton
+        answer_submit.setOnClickListener{
+            var id: Int = answer_options.checkedRadioButtonId
+            if(id != 1){
+                answer = findViewById(id)
+                Toast.makeText(this, "Checked answer: ${answer.text}", Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this, "Please select your answer.", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 }
