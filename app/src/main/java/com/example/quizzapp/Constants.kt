@@ -11,40 +11,35 @@ object Constants {
         "Interstellar",
         "Gravity",
         "Armageddon",
-        "Contact",
-        "Armageddon")
+        "Contact")
 
         val que2 = Question(2,
         "This classic horror film features a prom massacre.",
         "Carrie",
         "Scream",
         "Psycho",
-        "It",
-        "Carrie")
+        "It")
 
         val que3 = Question(3,
         "The star of this movie is a little pig who thinks he is a sheep dog.",
         "Range",
         "Babe",
         "Gordy",
-        "Ferdinand",
-        "Babe")
+        "Ferdinand")
 
         val que4 = Question(4,
         "Which of the following was directed by Martin Scorsese?",
         "Scarface",
         "Heat",
         "Munich",
-        "Casino",
         "Casino")
 
         val que5 = Question(5,
-        "Which of the following films was a musical?",
-        "Shaft",
-        "Evita",
-        "Ghost",
-        "Hitch",
-        "Evita")
+        "Which of the following was directed by Martin Scorsese?",
+        "Scarface",
+        "Heat",
+        "Munich",
+        "Casino")
 
         questionsList.add(que1)
         questionsList.add(que2)

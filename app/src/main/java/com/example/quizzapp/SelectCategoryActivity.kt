@@ -21,7 +21,6 @@ class SelectCategoryActivity : AppCompatActivity() {
 
         onewordtitles.setOnClickListener{
             val intent = Intent(this, AnswerActivity::class.java)
-            intent.putExtra("category_select", 1)
             startActivity(intent)
             finish()
         }
