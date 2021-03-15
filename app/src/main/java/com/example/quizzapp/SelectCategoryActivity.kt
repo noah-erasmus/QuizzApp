@@ -21,6 +21,24 @@ class SelectCategoryActivity : AppCompatActivity() {
 
         onewordtitles.setOnClickListener{
             val intent = Intent(this, AnswerActivity::class.java)
+            intent.putExtra("question_number", 1)
+            intent.putExtra("category_number", 1)
+            startActivity(intent)
+            finish()
+        }
+
+        oscarwinners.setOnClickListener{
+            val intent = Intent(this, AnswerActivity::class.java)
+            intent.putExtra("question_number", 1)
+            intent.putExtra("category_number", 2)
+            startActivity(intent)
+            finish()
+        }
+
+        generaltrivia.setOnClickListener{
+            val intent = Intent(this, AnswerActivity::class.java)
+            intent.putExtra("question_number", 1)
+            intent.putExtra("category_number", 3)
             startActivity(intent)
             finish()
         }

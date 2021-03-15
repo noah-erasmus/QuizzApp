@@ -165,6 +165,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/oscarwinners"
             android:layout_width="350dp"
             android:layout_height="100dp"
             app:cardElevation="10dp"
@@ -223,6 +224,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/generaltrivia"
             android:layout_width="350dp"
             android:layout_height="100dp"
             app:cardElevation="10dp"
