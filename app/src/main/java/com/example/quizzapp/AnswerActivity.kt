@@ -13,11 +13,24 @@ class AnswerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_answer)
 
-        val questionslist = Constants.getQuestions()
+
 
         var questionNumber = intent.getIntExtra("question_number", 1)
+        var questionslist = Constants.getCategory1()
+
         var categoryNumber = intent.getIntExtra("category_number", 1)
+
+        if(categoryNumber.equals(1)){
+            questionslist = Constants.getCategory1()
+        }else if(categoryNumber.equals(2)){
+            questionslist = Constants.getCategory2()
+        }else{
+            questionslist = Constants.getCategory3()
+        }
+
         val question = questionslist[questionNumber-1]
+
+
 
         quiz_question.text = question.question
         answer1.text = question.optionOne
