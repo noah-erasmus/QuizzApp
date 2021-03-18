@@ -13,7 +13,11 @@ class AnswerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_answer)
 
-
+        back2categories_btn.setOnClickListener{
+            val intent = Intent(this, SelectCategoryActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         var questionNumber = intent.getIntExtra("question_number", 1)
         var questionslist = Constants.getCategory1()
@@ -37,9 +41,6 @@ class AnswerActivity : AppCompatActivity() {
         answer2.text = question.optionTwo
         answer3.text = question.optionThree
         answer4.text = question.optionFour
-
-        progressbar.progress = questionNumber
-        progress.text = "$questionNumber" + "/" + questionslist.size
 
         var answer: RadioButton
         answer_submit.setOnClickListener{
