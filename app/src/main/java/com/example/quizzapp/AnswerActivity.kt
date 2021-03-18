@@ -41,6 +41,7 @@ class AnswerActivity : AppCompatActivity() {
         answer2.text = question.optionTwo
         answer3.text = question.optionThree
         answer4.text = question.optionFour
+        question_count.text = "Question ${question.id}"
 
         var answer: RadioButton
         answer_submit.setOnClickListener{
@@ -55,7 +56,6 @@ class AnswerActivity : AppCompatActivity() {
                 var wrongAnswers: Int = 0
 
                 if(answer.text.equals(question.correctAnswer)){
-                    Toast.makeText(this, "Submitted: ${answer.text} + Correct answer: ${question.correctAnswer}", Toast.LENGTH_SHORT).show()
                     rightAnswers++
 
                     val alertDialogBuilder = AlertDialog.Builder(this)

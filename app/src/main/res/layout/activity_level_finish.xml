@@ -11,19 +11,22 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:paddingTop="30dp">
+        android:paddingTop="30dp"
+        android:background="@drawable/quizzapp_bg">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="25dp"
-            android:text="LEVEL 1"></TextView>
+            android:text="LEVEL 1"
+            android:textColor="@color/white"></TextView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="50dp"
-            android:text="COMPLETE"></TextView>
+            android:text="COMPLETE"
+            android:textColor="@color/white"></TextView>
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="300dp"
@@ -58,12 +61,17 @@
         <Button
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="NEXT LEVEL"></Button>
+            android:text="NEXT LEVEL"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/question_count"></Button>
 
         <Button
+            android:id="@+id/newcategory_btn"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="NEW CATEGORY"></Button>
+            android:text="NEW CATEGORY"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/question_count"></Button>
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -72,7 +80,7 @@
             app:cardElevation="10dp"
             app:cardCornerRadius="50dp"
             android:layout_marginBottom="-50dp"
-            app:cardBackgroundColor="@color/grey">
+            app:cardBackgroundColor="@color/white">
 
         </com.google.android.material.card.MaterialCardView>
 

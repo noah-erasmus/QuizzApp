@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:fillViewport="true"
-    tools:context=".AnswerActivity">
+    tools:context=".SelectCategoryActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -96,14 +95,14 @@
         <RadioGroup
             android:id="@+id/answer_options"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="370dp"
             android:padding="15dp"
             android:layout_marginTop="10dp">
 
             <RadioButton
                 android:id="@+id/answer1"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="60dp"
                 android:text="Answer 1"
                 android:textSize="24sp"
                 android:layout_marginBottom="30dp"
@@ -116,7 +115,7 @@
             <RadioButton
                 android:id="@+id/answer2"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="60dp"
                 android:text="Answer 2"
                 android:textSize="24sp"
                 android:layout_marginBottom="30dp"
@@ -129,7 +128,7 @@
             <RadioButton
                 android:id="@+id/answer3"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="60dp"
                 android:text="Answer 2"
                 android:textSize="24sp"
                 android:layout_marginBottom="30dp"
@@ -142,7 +141,7 @@
             <RadioButton
                 android:id="@+id/answer4"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="60dp"
                 android:text="Answer 2"
                 android:textSize="24sp"
                 android:layout_marginBottom="30dp"
@@ -160,7 +159,6 @@
             android:id="@+id/answer_submit"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:backgroundTint="@color/white"
             android:gravity="center"
             android:padding="10dp"
@@ -172,4 +170,4 @@
 
     </LinearLayout>
 
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
