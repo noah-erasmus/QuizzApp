@@ -1,17 +1,20 @@
 package com.example.quizzapp
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.RadioButton
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_answer.*
 
 class AnswerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_answer)
+
+        val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
+        val editor =  sharedPref.edit()
 
         //Navigation listener - Category Select
         back2categories_btn.setOnClickListener{
@@ -21,14 +24,34 @@ class AnswerActivity : AppCompatActivity() {
         }
 
         //Find and use selected category
-        var questionslist = Constants.getCategory1()
+        var questionslist = Constants.getCategory1_1()
         var categoryNumber = intent.getIntExtra("category_number", 1)
         if(categoryNumber.equals(1)){
-            questionslist = Constants.getCategory1()
+            val categoryLevel = sharedPref.getInt(Constants.CATEGORY1_LEVEL, 1)
+            if(categoryLevel == 1){
+                questionslist = Constants.getCategory1_1()
+            }else if(categoryLevel == 2){
+                questionslist = Constants.getCategory1_2()
+            }else if(categoryLevel == 3){
+                questionslist = Constants.getCategory1_3()
+            }
+
         }else if(categoryNumber.equals(2)){
-            questionslist = Constants.getCategory2()
-        }else{
-            questionslist = Constants.getCategory3()
+            val categoryLevel = sharedPref.getInt(Constants.CATEGORY2_LEVEL, 1)
+            questionslist = Constants.getCategory2_1()
+            if(categoryLevel == 1){
+                questionslist = Constants.getCategory2_1()
+            }else if(categoryLevel == 2){
+                questionslist = Constants.getCategory2_2()
+            }
+        }else if(categoryNumber.equals(3)){
+            val categoryLevel = sharedPref.getInt(Constants.CATEGORY3_LEVEL, 1)
+            if(categoryLevel == 1){
+                questionslist = Constants.getCategory3_1()
+            }else if(categoryLevel == 2){
+                questionslist = Constants.getCategory3_2()
+            }
+
         }
 
         //Track progress in category
@@ -77,6 +100,7 @@ class AnswerActivity : AppCompatActivity() {
                         finish()
                     }else{
                         intent.putExtra("question_number", questionNumber)
+                        intent.putExtra("category_number", categoryNumber)
                         intent.putExtra("answer_status", "correct")
                         intent.putExtra("right_answers",rightAnswers)
                         startActivity(intent)

@@ -15,17 +15,21 @@ class AnswerResultActivity : AppCompatActivity() {
         var answerStatus = intent.getStringExtra("answer_status")
         var rightAnswers = intent.getIntExtra("right_answers", 0)
 
+        val categoryNumber = intent.getIntExtra("category_number", 1)
+
         nextquestion_btn.setOnClickListener{
             if(answerStatus == "correct"){
                 val intent = Intent(this, AnswerActivity::class.java)
                 intent.putExtra("question_number", questionNumber)
                 intent.putExtra("right_answers", rightAnswers)
+                intent.putExtra("category_number", categoryNumber)
                 startActivity(intent)
                 finish()
             }else if(answerStatus == "incorrect"){
                 val intent = Intent(this, AnswerActivity::class.java)
                 intent.putExtra("question_number", questionNumber)
                 intent.putExtra("right_answers", rightAnswers)
+                intent.putExtra("category_number", categoryNumber)
                 startActivity(intent)
                 finish()
             }

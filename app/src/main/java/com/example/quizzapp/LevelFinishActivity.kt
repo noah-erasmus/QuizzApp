@@ -44,15 +44,26 @@ class LevelFinishActivity : AppCompatActivity() {
         if(categoryNumber == 1){
             editor.apply{
                 putInt(Constants.CATEGORY1_LEVEL, newLevel)
+                apply()
             }
         }else if(categoryNumber == 2){
             editor.apply{
                 putInt(Constants.CATEGORY2_LEVEL, newLevel)
+                apply()
             }
         }else if(categoryNumber == 3){
             editor.apply{
                 putInt(Constants.CATEGORY3_LEVEL, newLevel)
+                apply()
             }
+        }
+
+        nextlevel_btn.setOnClickListener{
+            val intent = Intent(this, AnswerActivity::class.java)
+            intent.putExtra("question_number", 1)
+            intent.putExtra("category_number", categoryNumber)
+            startActivity(intent)
+            finish()
         }
 
         level_count.text = "LEVEL ${categoryLevel}"

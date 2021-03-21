@@ -89,12 +89,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Total Level Score:"
+                android:text="Total Level Score: "
                 android:textColor="@color/white">
 
             </TextView>
 
             <TextView
+                android:id="@+id/totallevel_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="20"
@@ -281,6 +282,12 @@
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/levelreset_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reset levels"></Button>
 
     </LinearLayout>
 

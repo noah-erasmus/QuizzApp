@@ -1,5 +1,6 @@
 package com.example.quizzapp
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,6 +15,9 @@ class EnterNameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_enter_name)
 
+        val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
+        val editor =  sharedPref.edit()
+
         //Input Listener - Name Entry
         name_enter.setOnClickListener{
 
@@ -23,11 +27,13 @@ class EnterNameActivity : AppCompatActivity() {
 
             //Else there is a value
             }else{
+                editor.apply{
+                    putString(Constants.USERNAME, name_edit.text.toString())
+                    apply()
+                }
 
                 //Navigate to Category Select
-                val intent =  Intent(this, SelectCategoryActivity::class.java).apply {
-                    putExtra(EXTRA_MESSAGE, name_edit.text.toString())
-                }
+                val intent =  Intent(this, SelectCategoryActivity::class.java)
                 startActivity(intent)
                 finish()
             }
