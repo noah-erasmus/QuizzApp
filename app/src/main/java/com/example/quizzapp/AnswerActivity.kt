@@ -33,7 +33,8 @@ class AnswerActivity : AppCompatActivity() {
 
         //Track progress in category
         var questionNumber = intent.getIntExtra("question_number", 1)
-        val question = questionslist[questionNumber-1]
+        val question = questionslist[questionNumber - 1]
+        var progressCounter = 1
 
         //Fill UI with question data
         quiz_question.text = question.question
@@ -57,8 +58,8 @@ class AnswerActivity : AppCompatActivity() {
                 answer = findViewById(id)
 
                 //Declare counters for wrong & right answers
-                var rightAnswers: Int = 0
-                var wrongAnswers: Int = 0
+                var rightAnswers: Int = intent.getIntExtra("right_answers", 0)
+                var wrongAnswers: Int = intent.getIntExtra("wrong_answers", 0)
 
                 //If the element's text matches the question's correct answer
                 if(answer.text.equals(question.correctAnswer)){
@@ -71,11 +72,14 @@ class AnswerActivity : AppCompatActivity() {
                     questionNumber++
                     if(questionNumber.equals((6))){
                         intent = Intent(this, LevelFinishActivity::class.java)
+                        intent.putExtra("category_number", categoryNumber)
+                        intent.putExtra("right_answers",rightAnswers)
                         startActivity(intent)
                         finish()
                     }else{
                         intent.putExtra("question_number", questionNumber)
                         intent.putExtra("answer_status", "correct")
+                        intent.putExtra("right_answers",rightAnswers)
                         startActivity(intent)
                         finish()
                     }
@@ -108,13 +112,14 @@ class AnswerActivity : AppCompatActivity() {
                 }else{
 
                     //Increment counter
-                    wrongAnswers++
+                    questionNumber++
 
 
                     //Navigate to result activity
                     var intent = Intent(this, AnswerResultActivity::class.java)
                     intent.putExtra("question_number", questionNumber)
                     intent.putExtra("answer_status", "incorrect")
+                    intent.putExtra("right_answers",rightAnswers)
                     startActivity(intent)
                     finish()
 

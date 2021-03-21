@@ -2,6 +2,10 @@ package com.example.quizzapp
 
 object Constants {
 
+    const val CATEGORY1_LEVEL : String = "category1_level"
+    const val CATEGORY2_LEVEL : String = "category2_level"
+    const val CATEGORY3_LEVEL : String = "category3_level"
+
     fun getCategory1(): ArrayList<Question>{
 
         val questionsList = ArrayList<Question>()

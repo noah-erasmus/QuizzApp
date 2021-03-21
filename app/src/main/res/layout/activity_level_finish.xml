@@ -15,6 +15,7 @@
         android:background="@drawable/quizzapp_bg">
 
         <TextView
+            android:id="@+id/level_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="25dp"
@@ -22,6 +23,7 @@
             android:textColor="@color/white"></TextView>
 
         <TextView
+            android:id="@+id/completion_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="50dp"
@@ -66,7 +68,7 @@
             android:textColor="@color/question_count"></Button>
 
         <Button
-            android:id="@+id/newcategory_btn"
+            android:id="@+id/selectcategory_btn"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="NEW CATEGORY"

@@ -12,12 +12,23 @@ class AnswerResultActivity : AppCompatActivity() {
 
         var questionNumber = intent.getIntExtra("question_number", 1)
         var answerStatus = intent.getStringExtra("answer_status")
+        var rightAnswers = intent.getIntExtra("right_answers", 0)
 
         nextquestion_btn.setOnClickListener{
-            val intent = Intent(this, AnswerActivity::class.java)
-            intent.putExtra("question_number", questionNumber)
-            startActivity(intent)
-            finish()
+            if(answerStatus == "correct"){
+                val intent = Intent(this, AnswerActivity::class.java)
+                intent.putExtra("question_number", questionNumber)
+                intent.putExtra("right_answers", rightAnswers)
+                startActivity(intent)
+                finish()
+            }else if(answerStatus == "incorrect"){
+                val intent = Intent(this, AnswerActivity::class.java)
+                intent.putExtra("question_number", questionNumber)
+                intent.putExtra("right_answers", rightAnswers)
+                startActivity(intent)
+                finish()
+            }
+
         }
 
         selectcategory_btn.setOnClickListener{
