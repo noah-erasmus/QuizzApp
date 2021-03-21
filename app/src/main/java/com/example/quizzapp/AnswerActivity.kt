@@ -66,29 +66,43 @@ class AnswerActivity : AppCompatActivity() {
                     //Increment counter
                     rightAnswers++
 
-                    //Build success dialog
-                    val alertDialogBuilder = AlertDialog.Builder(this)
-                    alertDialogBuilder.setTitle("CORRECT!")
-                    alertDialogBuilder.setMessage("Ready for the next question?")
-                    alertDialogBuilder.setPositiveButton("Continue"){dialog, which ->
-                        var intent = Intent(this, AnswerActivity::class.java)
-                        questionNumber++
-                        if(questionNumber.equals((6))){
-                            intent = Intent(this, LevelFinishActivity::class.java)
-                            startActivity(intent)
-                            finish()
-                        }else{
-                            intent.putExtra("question_number", questionNumber)
-                            startActivity(intent)
-                            finish()
-                        }
-                    }
-                    alertDialogBuilder.setNegativeButton("Categories"){dialog, which ->
-                        val intent = Intent(this, SelectCategoryActivity::class.java)
+                    //Navigate to success activity or level finish
+                    var intent = Intent(this, AnswerResultActivity::class.java)
+                    questionNumber++
+                    if(questionNumber.equals((6))){
+                        intent = Intent(this, LevelFinishActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }else{
+                        intent.putExtra("question_number", questionNumber)
+                        intent.putExtra("answer_status", "correct")
                         startActivity(intent)
                         finish()
                     }
-                    alertDialogBuilder.show()
+
+                    //Outdated - Build success dialog
+//                    val alertDialogBuilder = AlertDialog.Builder(this)
+//                    alertDialogBuilder.setTitle("CORRECT!")
+//                    alertDialogBuilder.setMessage("Ready for the next question?")
+//                    alertDialogBuilder.setPositiveButton("Continue"){dialog, which ->
+//                        var intent = Intent(this, AnswerActivity::class.java)
+//                        questionNumber++
+//                        if(questionNumber.equals((6))){
+//                            intent = Intent(this, LevelFinishActivity::class.java)
+//                            startActivity(intent)
+//                            finish()
+//                        }else{
+//                            intent.putExtra("question_number", questionNumber)
+//                            startActivity(intent)
+//                            finish()
+//                        }
+//                    }
+//                    alertDialogBuilder.setNegativeButton("Categories"){dialog, which ->
+//                        val intent = Intent(this, SelectCategoryActivity::class.java)
+//                        startActivity(intent)
+//                        finish()
+//                    }
+//                    alertDialogBuilder.show()
 
                 //Else the correct answer is not selected
                 }else{
@@ -96,23 +110,31 @@ class AnswerActivity : AppCompatActivity() {
                     //Increment counter
                     wrongAnswers++
 
-                    //Build failure dialog
-                    val alertDialogBuilder = AlertDialog.Builder(this)
-                    alertDialogBuilder.setTitle("INCORRECT!")
-                    alertDialogBuilder.setMessage("Want to try again?")
-                    alertDialogBuilder.setPositiveButton("Retry"){dialog, which ->
-                        val intent = Intent(this, AnswerActivity::class.java)
-                        intent.putExtra("question_number", questionNumber)
-                        intent.putExtra("category_number", categoryNumber)
-                        startActivity(intent)
-                        finish()
-                    }
-                    alertDialogBuilder.setNegativeButton("Categories"){dialog, which ->
-                        val intent = Intent(this, SelectCategoryActivity::class.java)
-                        startActivity(intent)
-                        finish()
-                    }
-                    alertDialogBuilder.show()
+
+                    //Navigate to result activity
+                    var intent = Intent(this, AnswerResultActivity::class.java)
+                    intent.putExtra("question_number", questionNumber)
+                    intent.putExtra("answer_status", "incorrect")
+                    startActivity(intent)
+                    finish()
+
+                    //Outdated - Build failure dialog
+//                    val alertDialogBuilder = AlertDialog.Builder(this)
+//                    alertDialogBuilder.setTitle("INCORRECT!")
+//                    alertDialogBuilder.setMessage("Want to try again?")
+//                    alertDialogBuilder.setPositiveButton("Retry"){dialog, which ->
+//                        val intent = Intent(this, AnswerActivity::class.java)
+//                        intent.putExtra("question_number", questionNumber)
+//                        intent.putExtra("category_number", categoryNumber)
+//                        startActivity(intent)
+//                        finish()
+//                    }
+//                    alertDialogBuilder.setNegativeButton("Categories"){dialog, which ->
+//                        val intent = Intent(this, SelectCategoryActivity::class.java)
+//                        startActivity(intent)
+//                        finish()
+//                    }
+//                    alertDialogBuilder.show()
 
                 }
 
