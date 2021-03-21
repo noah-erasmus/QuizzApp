@@ -17,6 +17,7 @@ class SelectCategoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select_category)
 
+        //Prepare shared preferences
         val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
         val editor =  sharedPref.edit()
 
@@ -26,10 +27,7 @@ class SelectCategoryActivity : AppCompatActivity() {
         //Custom greeting text
         hello_user.text = "Hello ${userName}"
 
-        var totalLevels = sharedPref.getInt(Constants.CATEGORY1_LEVEL, 1)
-                                + sharedPref.getInt(Constants.CATEGORY2_LEVEL, 1)
-                                + sharedPref.getInt(Constants.CATEGORY3_LEVEL, 1)
-
+        //Total category levels from shared preferences
         totallevel_view.text = "${
         sharedPref.getInt(Constants.CATEGORY1_LEVEL, 1) + sharedPref.getInt(com.example.quizzapp.Constants.CATEGORY2_LEVEL, 1) + sharedPref.getInt(com.example.quizzapp.Constants.CATEGORY3_LEVEL, 1)
         }"
@@ -61,6 +59,7 @@ class SelectCategoryActivity : AppCompatActivity() {
             finish()
         }
 
+        //Button to reset shared preferences
         levelreset_btn.setOnClickListener{
             editor.clear()
             editor.apply()

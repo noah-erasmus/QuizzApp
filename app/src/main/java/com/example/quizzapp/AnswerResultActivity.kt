@@ -10,38 +10,31 @@ class AnswerResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_answer_result)
 
+        //putExtra Import: question number, answer status, right answers & category number
         var questionNumber = intent.getIntExtra("question_number", 1)
         questionNumber++
         var answerStatus = intent.getStringExtra("answer_status")
         var rightAnswers = intent.getIntExtra("right_answers", 0)
-
         val categoryNumber = intent.getIntExtra("category_number", 1)
 
+        //Navigation listener - Next Question, pass question number, right answers & answer status
         nextquestion_btn.setOnClickListener{
-            if(answerStatus == "correct"){
-                val intent = Intent(this, AnswerActivity::class.java)
-                intent.putExtra("question_number", questionNumber)
-                intent.putExtra("right_answers", rightAnswers)
-                intent.putExtra("category_number", categoryNumber)
-                startActivity(intent)
-                finish()
-            }else if(answerStatus == "incorrect"){
-                val intent = Intent(this, AnswerActivity::class.java)
-                intent.putExtra("question_number", questionNumber)
-                intent.putExtra("right_answers", rightAnswers)
-                intent.putExtra("category_number", categoryNumber)
-                startActivity(intent)
-                finish()
-            }
-
+            val intent = Intent(this, AnswerActivity::class.java)
+            intent.putExtra("question_number", questionNumber)
+            intent.putExtra("right_answers", rightAnswers)
+            intent.putExtra("category_number", categoryNumber)
+            startActivity(intent)
+            finish()
         }
 
+        //Navigation listener - Category Select
         selectcategory_btn.setOnClickListener{
             val intent = Intent(this, SelectCategoryActivity::class.java)
             startActivity(intent)
             finish()
         }
 
+        //Set result image
         if(answerStatus == "correct"){
             result_img.setImageResource(R.drawable.tick)
         }else{

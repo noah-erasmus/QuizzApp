@@ -15,6 +15,7 @@ class EnterNameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_enter_name)
 
+        //Prepare shared preferences
         val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
         val editor =  sharedPref.edit()
 

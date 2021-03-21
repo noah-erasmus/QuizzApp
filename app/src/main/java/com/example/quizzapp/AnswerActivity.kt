@@ -13,6 +13,7 @@ class AnswerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_answer)
 
+        //Prepare shared preferences
         val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
         val editor =  sharedPref.edit()
 
