@@ -14,12 +14,17 @@ class EnterNameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_enter_name)
 
+        //Input Listener - Name Entry
         name_enter.setOnClickListener{
 
-
+            //If no name is given
             if(name_edit.text.toString().isEmpty()){
                 Toast.makeText(this , "Please enter your name", Toast.LENGTH_SHORT).show()
+
+            //Else there is a value
             }else{
+
+                //Navigate to Category Select
                 val intent =  Intent(this, SelectCategoryActivity::class.java).apply {
                     putExtra(EXTRA_MESSAGE, name_edit.text.toString())
                 }

@@ -13,17 +13,16 @@ class AnswerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_answer)
 
+        //Navigation listener - Category Select
         back2categories_btn.setOnClickListener{
             val intent = Intent(this, SelectCategoryActivity::class.java)
             startActivity(intent)
             finish()
         }
 
-        var questionNumber = intent.getIntExtra("question_number", 1)
+        //Find and use selected category
         var questionslist = Constants.getCategory1()
-
         var categoryNumber = intent.getIntExtra("category_number", 1)
-
         if(categoryNumber.equals(1)){
             questionslist = Constants.getCategory1()
         }else if(categoryNumber.equals(2)){
@@ -32,10 +31,11 @@ class AnswerActivity : AppCompatActivity() {
             questionslist = Constants.getCategory3()
         }
 
+        //Track progress in category
+        var questionNumber = intent.getIntExtra("question_number", 1)
         val question = questionslist[questionNumber-1]
 
-
-
+        //Fill UI with question data
         quiz_question.text = question.question
         answer1.text = question.optionOne
         answer2.text = question.optionTwo
@@ -43,21 +43,30 @@ class AnswerActivity : AppCompatActivity() {
         answer4.text = question.optionFour
         question_count.text = "Question ${question.id}"
 
+        //Listen for selected answer submission
         var answer: RadioButton
         answer_submit.setOnClickListener{
 
+            //Store ID of selected option in an integer
             var id: Int = answer_options.checkedRadioButtonId
+
+            //If an option is selected
             if(id != -1){
+
+                //Select answer element by ID
                 answer = findViewById(id)
 
-
-
+                //Declare counters for wrong & right answers
                 var rightAnswers: Int = 0
                 var wrongAnswers: Int = 0
 
+                //If the element's text matches the question's correct answer
                 if(answer.text.equals(question.correctAnswer)){
+
+                    //Increment counter
                     rightAnswers++
 
+                    //Build success dialog
                     val alertDialogBuilder = AlertDialog.Builder(this)
                     alertDialogBuilder.setTitle("CORRECT!")
                     alertDialogBuilder.setMessage("Ready for the next question?")
@@ -80,14 +89,21 @@ class AnswerActivity : AppCompatActivity() {
                         finish()
                     }
                     alertDialogBuilder.show()
+
+                //Else the correct answer is not selected
                 }else{
+
+                    //Increment counter
                     wrongAnswers++
+
+                    //Build failure dialog
                     val alertDialogBuilder = AlertDialog.Builder(this)
                     alertDialogBuilder.setTitle("INCORRECT!")
                     alertDialogBuilder.setMessage("Want to try again?")
                     alertDialogBuilder.setPositiveButton("Retry"){dialog, which ->
                         val intent = Intent(this, AnswerActivity::class.java)
                         intent.putExtra("question_number", questionNumber)
+                        intent.putExtra("category_number", categoryNumber)
                         startActivity(intent)
                         finish()
                     }
@@ -97,10 +113,15 @@ class AnswerActivity : AppCompatActivity() {
                         finish()
                     }
                     alertDialogBuilder.show()
+
                 }
+
+            //Else an option is not selected
             }else{
                 Toast.makeText(this, "Please select your answer.", Toast.LENGTH_SHORT).show()
             }
+
         }
+
     }
 }
