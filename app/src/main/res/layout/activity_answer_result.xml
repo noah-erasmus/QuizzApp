@@ -9,24 +9,46 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/background"
+        android:gravity="center"
         android:orientation="vertical"
-        android:gravity="center">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center"
-            app:cardCornerRadius="150dp"
-            android:layout_margin="50dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginBottom="40dp">
 
-            <ImageView
-                android:id="@+id/result_img"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:src="@drawable/cross"></ImageView>
+                android:layout_margin="50dp"
+                android:backgroundTint="@color/movie_red"
+                app:cardCornerRadius="150dp">
 
-        </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/result_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/cross"></ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/correctincorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CORRECT"
+                android:textColor="@color/movie_red"
+                android:textSize="25dp"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
+
 
         <Button
             android:id="@+id/nextquestion_btn"
@@ -36,8 +58,8 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="Next question"
-            android:textStyle="bold"
-            android:textColor="@color/white">
+            android:textColor="@color/white"
+            android:textStyle="bold">
 
         </Button>
 
@@ -49,8 +71,9 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="select category"
+            android:textColor="@color/white"
             android:textStyle="bold"
-            android:textColor="@color/white">
+            android:layout_marginTop="10dp">
 
         </Button>
 

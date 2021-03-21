@@ -27,6 +27,14 @@ class SelectCategoryActivity : AppCompatActivity() {
         //Custom greeting text
         hello_user.text = "Hello ${userName}"
 
+        //Set progress indicators
+        val category1Progress = sharedPref.getInt(Constants.CATEGORY1_LEVEL, 1) * 33.3
+        onewordtitles_progress.progress = category1Progress.toInt()
+        val category2Progress = sharedPref.getInt(Constants.CATEGORY2_LEVEL, 1) * 33.3
+        oscarwinners_progress.progress = category2Progress.toInt()
+        val category3Progress = sharedPref.getInt(Constants.CATEGORY3_LEVEL, 1) * 33.3
+        generaltrivia_progress.progress = category3Progress.toInt()
+
         //Total category levels from shared preferences
         totallevel_view.text = "${
         sharedPref.getInt(Constants.CATEGORY1_LEVEL, 1) + sharedPref.getInt(com.example.quizzapp.Constants.CATEGORY2_LEVEL, 1) + sharedPref.getInt(com.example.quizzapp.Constants.CATEGORY3_LEVEL, 1)

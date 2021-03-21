@@ -45,10 +45,15 @@ class LevelFinishActivity : AppCompatActivity() {
             newLevel--
         }
 
+        //Check if max level reached and Update UI
+        if(newLevel == 4){
+            nextlevel_btn.text = "Receive prize"
+        }
+
         //Update UI
         level_count.text = "LEVEL ${categoryLevel}"
 
-        //Store category number in shared preferences
+        //Store category level in shared preferences
         if(categoryNumber == 1){
             editor.apply{
                 putInt(Constants.CATEGORY1_LEVEL, newLevel)
@@ -66,13 +71,21 @@ class LevelFinishActivity : AppCompatActivity() {
             }
         }
 
-        //Navigation listener - Next Level, pass question number & category number
+        //Navigation listener - Next Level/Prize, check if max level, pass question number & category number
         nextlevel_btn.setOnClickListener{
-            val intent = Intent(this, AnswerActivity::class.java)
-            intent.putExtra("question_number", 1)
-            intent.putExtra("category_number", categoryNumber)
-            startActivity(intent)
-            finish()
+            if(newLevel == 4){
+                val intent = Intent(this, PrizeActivity::class.java)
+                intent.putExtra("category_number", categoryNumber)
+                startActivity(intent)
+                finish()
+            }else if(newLevel < 4){
+                val intent = Intent(this, AnswerActivity::class.java)
+                intent.putExtra("question_number", 1)
+                intent.putExtra("category_number", categoryNumber)
+                startActivity(intent)
+                finish()
+            }
+
         }
 
     }

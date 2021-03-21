@@ -17,6 +17,13 @@ class AnswerResultActivity : AppCompatActivity() {
         var rightAnswers = intent.getIntExtra("right_answers", 0)
         val categoryNumber = intent.getIntExtra("category_number", 1)
 
+        //Update UI
+        if(answerStatus == "correct"){
+            correctincorrect.text = "CORRECT"
+        }else if(answerStatus == "incorrect"){
+            correctincorrect.text = "INCORRECT"
+        }
+
         //Navigation listener - Next Question, pass question number, right answers & answer status
         nextquestion_btn.setOnClickListener{
             val intent = Intent(this, AnswerActivity::class.java)
