@@ -69,8 +69,7 @@ class AnswerActivity : AppCompatActivity() {
 
                     //Navigate to success activity or level finish
                     var intent = Intent(this, AnswerResultActivity::class.java)
-                    questionNumber++
-                    if(questionNumber.equals((6))){
+                    if(questionNumber.equals((5))){
                         intent = Intent(this, LevelFinishActivity::class.java)
                         intent.putExtra("category_number", categoryNumber)
                         intent.putExtra("right_answers",rightAnswers)
@@ -111,17 +110,23 @@ class AnswerActivity : AppCompatActivity() {
                 //Else the correct answer is not selected
                 }else{
 
-                    //Increment counter
-                    questionNumber++
+                    if(questionNumber.equals((5))){
+                        intent = Intent(this, LevelFinishActivity::class.java)
+                        intent.putExtra("category_number", categoryNumber)
+                        intent.putExtra("right_answers",rightAnswers)
+                        startActivity(intent)
+                        finish()
+                    }else{
+                        //Navigate to result activity
+                        var intent = Intent(this, AnswerResultActivity::class.java)
+                        intent.putExtra("question_number", questionNumber)
+                        intent.putExtra("answer_status", "incorrect")
+                        intent.putExtra("right_answers",rightAnswers)
+                        startActivity(intent)
+                        finish()
+                    }
 
 
-                    //Navigate to result activity
-                    var intent = Intent(this, AnswerResultActivity::class.java)
-                    intent.putExtra("question_number", questionNumber)
-                    intent.putExtra("answer_status", "incorrect")
-                    intent.putExtra("right_answers",rightAnswers)
-                    startActivity(intent)
-                    finish()
 
                     //Outdated - Build failure dialog
 //                    val alertDialogBuilder = AlertDialog.Builder(this)

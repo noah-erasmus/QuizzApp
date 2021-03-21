@@ -11,6 +11,7 @@ class AnswerResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_answer_result)
 
         var questionNumber = intent.getIntExtra("question_number", 1)
+        questionNumber++
         var answerStatus = intent.getStringExtra("answer_status")
         var rightAnswers = intent.getIntExtra("right_answers", 0)
 
