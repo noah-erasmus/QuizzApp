@@ -29,10 +29,13 @@ class SelectCategoryActivity : AppCompatActivity() {
 
         //Set progress indicators
         var category1Progress = sharedPref.getInt(Constants.CATEGORY1_LEVEL, 1) * 33.3
+        category1Progress--
         onewordtitles_progress.progress = category1Progress.toInt()
         var category2Progress = sharedPref.getInt(Constants.CATEGORY2_LEVEL, 1) * 33.3
+        category2Progress--
         oscarwinners_progress.progress = category2Progress.toInt()
         var category3Progress = sharedPref.getInt(Constants.CATEGORY3_LEVEL, 1) * 33.3
+        category3Progress--
         generaltrivia_progress.progress = category3Progress.toInt()
         category1Progress /= 33.3
         onewordtitles_counter.text = "${category1Progress.toString().substringBefore(".")}/3"

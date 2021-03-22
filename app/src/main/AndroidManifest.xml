@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizzApp">
-        <activity android:name=".PrizeActivity"></activity>
+        <activity android:name=".AvatarSelectActivity"></activity>
+        <activity android:name=".PrizeActivity" />
         <activity android:name=".AnswerResultActivity" />
         <activity android:name=".AnswerActivity" />
         <activity android:name=".LevelFinishActivity" />

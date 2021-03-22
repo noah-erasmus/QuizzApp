@@ -4,70 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EnterNameActivity">
+    tools:context=".EnterNameActivity"
+    android:background="@color/background">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_height="wrap_content">
 
-        <TextView
+        <RelativeLayout
+            android:id="@+id/login_top"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="30sp"
-            android:text="Welcome to FilmQuiz!">
-
-        </TextView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center"
-            app:cardCornerRadius="150dp"
-            android:layout_margin="50dp">
-
+            android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                android:layout_gravity="center"
-                android:src="@drawable/red_film"></ImageView>
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/login_shape"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"></ImageView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/login_icon"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"></ImageView>
+            </RelativeLayout>
 
-        </androidx.cardview.widget.CardView>
+        </RelativeLayout>
 
-        <TextView
+
+
+        <LinearLayout
+            android:layout_below="@+id/login_top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="What can we call you?"
+            android:orientation="vertical"
             android:gravity="center">
 
-        </TextView>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/name_edit"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Your name">
+                android:gravity="center"
+                android:textSize="30sp"
+                android:text="Welcome to FilmQuiz!"
+                android:textColor="@color/movie_red"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"></TextView>
 
-            </com.google.android.material.textfield.TextInputEditText>
-            
-        </com.google.android.material.textfield.TextInputLayout>
-        
-        <Button
-            android:id="@+id/name_enter"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:text="Enter"
-            android:textStyle="bold">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What can we call you?"
+                android:gravity="center"
+                android:textColor="@color/movie_red"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp">
 
-        </Button>
+            </TextView>
 
-    </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Your name">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/name_enter"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Enter"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"></Button>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
