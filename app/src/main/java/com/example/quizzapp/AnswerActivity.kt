@@ -69,6 +69,48 @@ class AnswerActivity : AppCompatActivity() {
         answer4.text = question.optionFour
         question_count.text = "Question ${question.id}"
 
+        //Answer Status Tracker
+        var q1Status = sharedPref.getString(Constants.Q1STATUS, "neutral")
+        var q2Status = sharedPref.getString(Constants.Q2STATUS, "neutral")
+        var q3Status = sharedPref.getString(Constants.Q3STATUS, "neutral")
+        var q4Status = sharedPref.getString(Constants.Q4STATUS, "neutral")
+        var q5Status = sharedPref.getString(Constants.Q5STATUS, "neutral")
+        if(q1Status == "neutral"){
+            q1_status.setImageResource(R.drawable.status_neutral)
+        }else if(q1Status == "correct"){
+            q1_status.setImageResource(R.drawable.tick_small)
+        }else if(q1Status == "incorrect"){
+            q1_status.setImageResource(R.drawable.cross_small)
+        }
+        if(q2Status == "neutral"){
+            q2_status.setImageResource(R.drawable.status_neutral)
+        }else if(q2Status == "correct"){
+            q2_status.setImageResource(R.drawable.tick_small)
+        }else if(q1Status == "incorrect"){
+            q2_status.setImageResource(R.drawable.cross_small)
+        }
+        if(q3Status == "neutral"){
+            q3_status.setImageResource(R.drawable.status_neutral)
+        }else if(q3Status == "correct"){
+            q3_status.setImageResource(R.drawable.tick_small)
+        }else if(q1Status == "incorrect"){
+            q3_status.setImageResource(R.drawable.cross_small)
+        }
+        if(q4Status == "neutral"){
+            q4_status.setImageResource(R.drawable.status_neutral)
+        }else if(q4Status == "correct"){
+            q4_status.setImageResource(R.drawable.tick_small)
+        }else if(q4Status == "incorrect"){
+            q4_status.setImageResource(R.drawable.cross_small)
+        }
+        if(q5Status == "neutral"){
+            q5_status.setImageResource(R.drawable.status_neutral)
+        }else if(q1Status == "correct"){
+            q5_status.setImageResource(R.drawable.tick_small)
+        }else if(q1Status == "incorrect"){
+            q5_status.setImageResource(R.drawable.cross_small)
+        }
+
         //Listen for selected answer submission
         var answer: RadioButton
         answer_submit.setOnClickListener{

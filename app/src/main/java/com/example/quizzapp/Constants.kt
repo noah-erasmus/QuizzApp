@@ -9,6 +9,13 @@ object Constants {
     const val USERNAME : String = "Noah"
     const val  AVATAR : String = "astronaut"
 
+    const val Q1STATUS : String = "incorrect"
+    const val Q2STATUS : String = "incorrect"
+    const val Q3STATUS : String = "incorrect"
+    const val Q4STATUS : String = "incorrect"
+    const val Q5STATUS : String = "incorrect"
+    const val Q_COUNTER : String = "1"
+
     fun getCategory1_1(): ArrayList<Question>{
 
         val questionsList = ArrayList<Question>()

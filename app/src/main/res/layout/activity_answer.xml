@@ -189,6 +189,64 @@
 
         </Button>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="30dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/answer_tracker_line"
+                android:layout_centerVertical="true"></ImageView>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+                <ImageView
+                    android:id="@+id/q1_status"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/status_neutral"></ImageView>
+                <ImageView
+                    android:id="@+id/q2_status"
+                    android:layout_toRightOf="@id/q1_status"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/status_neutral"></ImageView>
+                <ImageView
+                    android:id="@+id/q3_status"
+                    android:layout_toRightOf="@id/q2_status"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/status_neutral"></ImageView>
+                <ImageView
+                    android:id="@+id/q4_status"
+                    android:layout_toRightOf="@id/q3_status"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/status_neutral"></ImageView>
+                <ImageView
+                    android:id="@+id/q5_status"
+                    android:layout_toRightOf="@id/q4_status"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/status_neutral"></ImageView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
