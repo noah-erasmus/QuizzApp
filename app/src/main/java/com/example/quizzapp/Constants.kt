@@ -6,8 +6,8 @@ object Constants {
     const val CATEGORY2_LEVEL : String = "category2_level"
     const val CATEGORY3_LEVEL : String = "category3_level"
 
-//    const val TOTAL_LEVELS : String = "totallevels"
     const val USERNAME : String = "Noah"
+    const val  AVATAR : String = "astronaut"
 
     fun getCategory1_1(): ArrayList<Question>{
 

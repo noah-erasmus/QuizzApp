@@ -34,7 +34,7 @@ class EnterNameActivity : AppCompatActivity() {
                 }
 
                 //Navigate to Category Select
-                val intent =  Intent(this, SelectCategoryActivity::class.java)
+                val intent =  Intent(this, AvatarSelectActivity::class.java)
                 startActivity(intent)
                 finish()
             }

@@ -25,7 +25,7 @@ class SelectCategoryActivity : AppCompatActivity() {
         val userName = sharedPref.getString(Constants.USERNAME, "Noah")
 
         //Custom greeting text
-        hello_user.text = "Hello ${userName}"
+        hello_user.text = "${userName}"
 
         //Set progress indicators
         var category1Progress = sharedPref.getInt(Constants.CATEGORY1_LEVEL, 1) * 33.3

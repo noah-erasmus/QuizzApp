@@ -13,98 +13,115 @@
         android:gravity="center_horizontal"
         android:background="@color/background">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="15dp">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
-                android:insetRight="0dp"
-                android:insetLeft="0dp"
-                app:cardCornerRadius="25dp"
-                android:elevation="10dp">
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/back_arrow"
-                    android:layout_gravity="center"></ImageView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/profilecard"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            app:cardElevation="10dp"
+            android:layout_marginBottom="15dp"
+            app:cardBackgroundColor="@color/movie_red"
+            android:layout_marginTop="30dp">
 
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CATEGORIES"
-                android:textSize="25dp"
-                android:layout_marginLeft="70dp"
-                android:layout_marginRight="70dp"
-                android:textColor="@color/normal_text">
-
-            </TextView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
-                android:insetRight="0dp"
-                android:insetLeft="0dp"
-                app:cardCornerRadius="25dp"
-                android:elevation="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/astronaut_white"
+                    android:padding="10dp"></ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/menu_button"
-                    android:layout_gravity="center"></ImageView>
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/hello_user"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:text="Joe Johnson"
+                            android:textColor="@color/background"></TextView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="LVL"
+                            android:textColor="@color/background"
+                            android:layout_marginLeft="10dp"></TextView>
+                        <TextView
+                            android:id="@+id/totallevel_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="25sp"
+                            android:text="1"
+                            android:textColor="@color/background"></TextView>
 
-            </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="Your Trophies:"
+                            android:textColor="@color/background"
+                            android:layout_marginLeft="10dp"></TextView>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="3dp">
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/empty_trophy"
+                                android:layout_marginLeft="10dp"></ImageView>
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/empty_trophy"
 
-        </LinearLayout>
+                                android:layout_marginLeft="10dp"></ImageView>
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/empty_trophy"
+
+                                android:layout_marginLeft="10dp"></ImageView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
 
         <TextView
-            android:id="@+id/hello_user"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/normal_text"
-            android:text="Hello"
-            android:gravity="center_horizontal">
-
-        </TextView>
-
-        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginBottom="25dp"
-            android:layout_marginTop="25dp">
+            android:text="CATEGORIES"
+            android:textSize="30dp"
+            android:textColor="@color/movie_red"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="20dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Total Level Score: "
-                android:textColor="@color/normal_text">
-
-            </TextView>
-
-            <TextView
-                android:id="@+id/totallevel_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="20"
-                android:textSize="20dp"
-                android:textColor="@color/normal_text">
-
-            </TextView>
-
-        </LinearLayout>
+        </TextView>
         
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/onewordtitles"
@@ -129,7 +146,9 @@
                         android:layout_height="wrap_content"
                         android:textSize="25dp"
                         android:layout_marginBottom="30dp"
-                        android:text="One Word Titles"></TextView>
+                        android:text="One Word Titles"
+                        android:textColor="@color/movie_red"
+                        android:textStyle="bold"></TextView>
 
                     <LinearLayout
                         android:layout_width="230dp"
@@ -192,7 +211,9 @@
                         android:layout_height="wrap_content"
                         android:textSize="25dp"
                         android:layout_marginBottom="30dp"
-                        android:text="Oscar Winners"></TextView>
+                        android:text="Oscar Winners"
+                        android:textColor="@color/movie_red"
+                        android:textStyle="bold"></TextView>
 
                     <LinearLayout
                         android:layout_width="230dp"
@@ -255,7 +276,9 @@
                         android:layout_height="wrap_content"
                         android:textSize="25dp"
                         android:layout_marginBottom="30dp"
-                        android:text="General Trivia"></TextView>
+                        android:text="General Trivia"
+                        android:textColor="@color/movie_red"
+                        android:textStyle="bold"></TextView>
 
                     <LinearLayout
                         android:layout_width="230dp"
@@ -299,7 +322,8 @@
             android:id="@+id/levelreset_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="reset levels"></Button>
+            android:text="logout"
+            android:layout_marginTop="20dp"></Button>
 
     </LinearLayout>
 
