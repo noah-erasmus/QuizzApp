@@ -21,11 +21,25 @@ class SelectCategoryActivity : AppCompatActivity() {
         val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
         val editor =  sharedPref.edit()
 
-        //Get username value from putExtra
+        //Get username & avatar value from shared preferences
         val userName = sharedPref.getString(Constants.USERNAME, "Noah")
+        val avatar = sharedPref.getString(Constants.AVATAR, "astronaut")
 
-        //Custom greeting text
+        //Update UI for profile card
         hello_user.text = "${userName}"
+        if(avatar == "astronaut"){
+            user_avatar.setImageResource(R.drawable.astronaut_white)
+        }else if(avatar == "nurse"){
+            user_avatar.setImageResource(R.drawable.nurse_white)
+        }else if(avatar == "waitress"){
+            user_avatar.setImageResource(R.drawable.waitress_white)
+        }else if(avatar == "chef"){
+            user_avatar.setImageResource(R.drawable.chef_white)
+        }else if(avatar == "shipcaptain"){
+            user_avatar.setImageResource(R.drawable.shipcaptain_white)
+        }else if(avatar == "concierge"){
+            user_avatar.setImageResource(R.drawable.concierge_white)
+        }
 
         //Set progress indicators
         var category1Progress = sharedPref.getInt(Constants.CATEGORY1_LEVEL, 1) * 33.3
@@ -81,7 +95,7 @@ class SelectCategoryActivity : AppCompatActivity() {
         levelreset_btn.setOnClickListener{
             editor.clear()
             editor.apply()
-            val intent = Intent(this, SelectCategoryActivity::class.java)
+            val intent = Intent(this, EnterNameActivity::class.java)
             startActivity(intent)
             finish()
         }

@@ -90,23 +90,11 @@
                         </TextView>
                     </LinearLayout>
 
-                    <androidx.cardview.widget.CardView
+                    <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:insetTop="0dp"
-                        android:insetBottom="0dp"
-                        android:insetRight="0dp"
-                        android:insetLeft="0dp"
-                        app:cardCornerRadius="25dp"
-                        android:elevation="10dp">
-
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/menu_button"
-                            android:layout_gravity="center"></ImageView>
-
-                    </androidx.cardview.widget.CardView>
+                        android:src="@drawable/astronaut_white"
+                        android:layout_gravity="center"></ImageView>
 
                 </LinearLayout>
                 <TextView
