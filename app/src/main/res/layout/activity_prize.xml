@@ -10,23 +10,51 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:background="@color/background">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center"
-            app:cardCornerRadius="150dp"
-            android:layout_margin="50dp">
-
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
             <ImageView
                 android:id="@+id/result_img"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
                 android:layout_gravity="center"
-                android:src="@drawable/oscar"></ImageView>
+                android:src="@drawable/trophy_big"></ImageView>
 
-        </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/congratulations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONGRATULATIONS"
+                android:textColor="@color/movie_red"
+                android:textSize="25dp"
+                android:textStyle="bold"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You won a trophy!"
+                android:textColor="@color/movie_red"
+                android:textSize="18dp"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/trophycase_btn"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/movie_red"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="view trophy case"
+            android:textStyle="bold"
+            android:textColor="@color/white">
+
+        </Button>
 
         <Button
             android:id="@+id/selectcategory_btn"
@@ -37,7 +65,8 @@
             android:padding="10dp"
             android:text="select category"
             android:textStyle="bold"
-            android:textColor="@color/white">
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp">
 
         </Button>
 

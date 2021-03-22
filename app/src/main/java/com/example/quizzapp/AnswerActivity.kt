@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.RadioButton
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_answer.*
+import kotlinx.android.synthetic.main.activity_level_finish.*
 
 class AnswerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +19,7 @@ class AnswerActivity : AppCompatActivity() {
         val editor =  sharedPref.edit()
 
         //Navigation listener - Category Select
-        back2categories_btn.setOnClickListener{
+        back2category_btn.setOnClickListener{
             val intent = Intent(this, SelectCategoryActivity::class.java)
             startActivity(intent)
             finish()

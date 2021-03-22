@@ -28,12 +28,19 @@ class SelectCategoryActivity : AppCompatActivity() {
         hello_user.text = "Hello ${userName}"
 
         //Set progress indicators
-        val category1Progress = sharedPref.getInt(Constants.CATEGORY1_LEVEL, 1) * 33.3
+        var category1Progress = sharedPref.getInt(Constants.CATEGORY1_LEVEL, 1) * 33.3
         onewordtitles_progress.progress = category1Progress.toInt()
-        val category2Progress = sharedPref.getInt(Constants.CATEGORY2_LEVEL, 1) * 33.3
+        var category2Progress = sharedPref.getInt(Constants.CATEGORY2_LEVEL, 1) * 33.3
         oscarwinners_progress.progress = category2Progress.toInt()
-        val category3Progress = sharedPref.getInt(Constants.CATEGORY3_LEVEL, 1) * 33.3
+        var category3Progress = sharedPref.getInt(Constants.CATEGORY3_LEVEL, 1) * 33.3
         generaltrivia_progress.progress = category3Progress.toInt()
+        category1Progress /= 33.3
+        onewordtitles_counter.text = "${category1Progress.toString().substringBefore(".")}/3"
+        category2Progress /= 33.3
+        oscarwinners_counter.text = "${category2Progress.toString().substringBefore(".")}/3"
+        category3Progress /= 33.3
+        generaltrivia_counter.text = "${category3Progress.toString().substringBefore(".")}/3"
+
 
         //Total category levels from shared preferences
         totallevel_view.text = "${

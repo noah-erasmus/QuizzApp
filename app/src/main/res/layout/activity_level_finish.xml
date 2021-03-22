@@ -12,7 +12,7 @@
         android:orientation="vertical"
         android:gravity="center_horizontal"
         android:paddingTop="30dp"
-        android:background="@drawable/quizzapp_bg">
+        android:background="@color/background">
 
         <TextView
             android:id="@+id/level_count"
@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:textSize="25dp"
             android:text="LEVEL 1"
-            android:textColor="@color/white"></TextView>
+            android:textColor="@color/movie_red"></TextView>
 
         <TextView
             android:id="@+id/completion_status"
@@ -28,64 +28,98 @@
             android:layout_height="wrap_content"
             android:textSize="50dp"
             android:text="COMPLETE"
-            android:textColor="@color/white"></TextView>
+            android:textColor="@color/movie_red"></TextView>
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="150dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp">
-
-            <LinearLayout
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/answersmeter_progress"
                 android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:src="@drawable/answers_meter_1"></ImageView>
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="120dp">
-
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/answersmeter_count"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100%"
-                    android:gravity="center"></TextView>
-
+                    android:text="1"
+                    android:textSize="70sp"
+                    android:textColor="@color/movie_red"
+                    android:textStyle="bold"></TextView>
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="10/10"
-                    android:gravity="center"></TextView>
-
+                    android:text="/5"
+                    android:textSize="50sp"
+                    android:textColor="@color/movie_red"
+                    android:textStyle="bold"></TextView>
             </LinearLayout>
 
-        </com.google.android.material.card.MaterialCardView>
+        </RelativeLayout>
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="300dp"-->
+<!--            app:cardElevation="10dp"-->
+<!--            app:cardCornerRadius="150dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:layout_marginBottom="30dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_marginTop="120dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="100%"-->
+<!--                    android:gravity="center"></TextView>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="10/10"-->
+<!--                    android:gravity="center"></TextView>-->
+
+<!--            </LinearLayout>-->
+
+<!--        </com.google.android.material.card.MaterialCardView>-->
 
         <Button
             android:id="@+id/nextlevel_btn"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="NEXT LEVEL"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/question_count"></Button>
+            android:backgroundTint="@color/movie_red"
+            android:textColor="@color/background"></Button>
 
         <Button
             android:id="@+id/selectcategory_btn"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="NEW CATEGORY"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/question_count"></Button>
+            android:backgroundTint="@color/movie_red"
+            android:textColor="@color/background"></Button>
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginTop="25dp"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="50dp"
-            android:layout_marginBottom="-50dp"
-            app:cardBackgroundColor="@color/white">
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="fill_parent"-->
+<!--            android:layout_marginTop="25dp"-->
+<!--            app:cardElevation="10dp"-->
+<!--            app:cardCornerRadius="50dp"-->
+<!--            android:layout_marginBottom="-50dp"-->
+<!--            app:cardBackgroundColor="@color/white">-->
 
-        </com.google.android.material.card.MaterialCardView>
+<!--        </com.google.android.material.card.MaterialCardView>-->
 
     </LinearLayout>
 

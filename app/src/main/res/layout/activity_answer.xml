@@ -8,89 +8,122 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="16dp"
-        android:background="@drawable/quizzapp_bg">
+        android:padding="0dp"
+        android:background="@color/background">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <androidx.cardview.widget.CardView
-                android:id="@+id/back2categories_btn"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
-                android:insetRight="0dp"
-                android:insetLeft="0dp"
-                app:cardCornerRadius="25dp"
-                android:elevation="10dp">
+            android:layout_height="200dp">
 
-                <ImageView
-                    android:layout_width="20dp"
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/semicircle"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true">
+
+            </ImageView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_centerHorizontal="true">
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/back_arrow"
-                    android:layout_gravity="center"></ImageView>
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp">
 
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/back2category_btn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:insetRight="0dp"
+                        android:insetLeft="0dp"
+                        app:cardCornerRadius="25dp"
+                        android:elevation="10dp">
 
-        <LinearLayout
-            android:layout_width="325dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="left">
-            <TextView
-                android:id="@+id/question_count"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/question_count"
-                android:text="Question 1">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/back_arrow"
+                            android:layout_gravity="center"></ImageView>
 
+                    </androidx.cardview.widget.CardView>
 
-            </TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/question_count"
-                android:text="/5">
+                    <LinearLayout
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal">
 
-
-            </TextView>
-        </LinearLayout>
-
-
-
-        <ImageView
-            android:layout_marginTop="10dp"
-            android:layout_width="325dp"
-            android:layout_height="4dp"
-            android:src="@drawable/dotted"
-            android:layerType="software" />
-
-        <TextView
-            android:id="@+id/quiz_question"
-            android:layout_width="325dp"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:textSize="24dp"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            android:text="This will be the question"
-            android:textColor="@color/white">
+                        <TextView
+                            android:id="@+id/question_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:textSize="30dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/background"
+                            android:text="Question 1">
 
 
-        </TextView>
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/background"
+                            android:text="/5">
+
+
+                        </TextView>
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:insetRight="0dp"
+                        android:insetLeft="0dp"
+                        app:cardCornerRadius="25dp"
+                        android:elevation="10dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/menu_button"
+                            android:layout_gravity="center"></ImageView>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/quiz_question"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:text="This will be the question"
+                    android:textColor="@color/white">
+
+
+                </TextView>
+            </LinearLayout>
+        </RelativeLayout>
 
         <RadioGroup
             android:id="@+id/answer_options"
@@ -104,10 +137,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Answer 1"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/answer_border"
-                android:textColor="@color/white"
+                android:textColor="@color/normal_text"
                 android:paddingLeft="15dp">
 
             </RadioButton>
@@ -117,10 +150,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Answer 2"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/answer_border"
-                android:textColor="@color/white"
+                android:textColor="@color/normal_text"
                 android:paddingLeft="15dp">
 
             </RadioButton>
@@ -130,10 +163,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Answer 2"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/answer_border"
-                android:textColor="@color/white"
+                android:textColor="@color/normal_text"
                 android:paddingLeft="15dp">
 
             </RadioButton>
@@ -143,10 +176,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Answer 2"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/answer_border"
-                android:textColor="@color/white"
+                android:textColor="@color/normal_text"
                 android:paddingLeft="15dp">
 
             </RadioButton>
@@ -159,12 +192,12 @@
             android:id="@+id/answer_submit"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/movie_red"
             android:gravity="center"
             android:padding="10dp"
             android:text="Next"
             android:textStyle="bold"
-            android:textColor="@color/question_count">
+            android:textColor="@color/white">
 
         </Button>
 

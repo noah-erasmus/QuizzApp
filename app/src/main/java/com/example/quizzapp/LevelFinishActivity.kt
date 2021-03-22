@@ -52,6 +52,22 @@ class LevelFinishActivity : AppCompatActivity() {
 
         //Update UI
         level_count.text = "LEVEL ${categoryLevel}"
+        if(rightAnswers == 1){
+            answersmeter_count.text == "1"
+            answersmeter_progress.setImageResource(R.drawable.answers_meter_1)
+        }else if(rightAnswers == 2){
+            answersmeter_count.text == "2"
+            answersmeter_progress.setImageResource(R.drawable.answers_meter_2)
+        }else if(rightAnswers == 3){
+            answersmeter_count.text == "3"
+            answersmeter_progress.setImageResource(R.drawable.answers_meter_3)
+        }else if(rightAnswers == 4){
+            answersmeter_count.text == "4"
+            answersmeter_progress.setImageResource(R.drawable.answers_meter_4)
+        }else if(rightAnswers == 5){
+            answersmeter_count.text == "5"
+            answersmeter_progress.setImageResource(R.drawable.answers_meter_5)
+        }
 
         //Store category level in shared preferences
         if(categoryNumber == 1){
