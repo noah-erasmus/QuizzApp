@@ -35,16 +35,16 @@
   <h3 align="center">FilmQuiz</h3>
 
   <p align="center">
-    Movie-Trivia App
+    Test your film knowledge.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/noah-erasmus/QuizzApp"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/github_username/repo_name">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/noah-erasmus/QuizzApp/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/noah-erasmus/QuizzApp/issues">Request Feature</a>
   </p>
 </p>
 
@@ -83,17 +83,15 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
+FilmQuiz is a mobile game designed to test the limits of your movie-knowledge. See how well you stack up in 3 different film-related categories.
+
+The task this term was to design and develop an application that would provide friends and family with a trivia app to keep them enterained during lockdown. Film trivia provides a near endless source of interesting questions; and everyone loves movies.
 
 
 ### Built With
 
-* []()
-* []()
-* []()
-
+* [Kotlin](https://kotlinlang.org/docs/home.html)
+* [Android Studio](https://developer.android.com/studio)
 
 
 <!-- GETTING STARTED -->
@@ -111,16 +109,13 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Clone the repo
+1. Download and install [Android Studio](https://developer.android.com/studio). At the second step select the option to include Android Virtual Device.
+2. Clone git repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https:://github.com/https://github.com/noah-erasmus/QuizzApp.git
    ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-
-
+3. Open in Android Studio
+4. Run emulator
 
 <!-- USAGE EXAMPLES -->
 ## Usage
