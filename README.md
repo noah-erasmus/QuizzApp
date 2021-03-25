@@ -28,9 +28,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
+<!--   <a href="https://github.com/github_username/repo_name">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
   <h3 align="center">FilmQuiz</h3>
 
@@ -81,7 +81,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot](https://drive.google.com/file/d/1gMkPHSo0gd02gUsNovSdaU-ZZSjl_3i4/view?usp=sharing)
 
 FilmQuiz is a mobile game designed to test the limits of your movie-knowledge. See how well you stack up in 3 different film-related categories.
 
@@ -120,16 +120,25 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Users enter their nickname, then they choose their avatar to form their profile.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+From the categories page they pick how they want their knowledge to be tested. They then have to get 3/5 questions right in tha category in order to move onto the next level. Completing a level increased the level tracker on the user's profile.
 
+After completing all of the levels in a category, the user is presented with a trophy for their achievements.
+
+[!Mockup1](https://drive.google.com/file/d/1x7BBnF2_KvHmYmucrCsFl4NGlP024I6L/view?usp=sharing)
+[!Mockup2](https://drive.google.com/file/d/1bWuk4pjgf_2D55STBX1Jhw7UqbTdkLzB/view?usp=sharing)
+[!Mockup3](https://drive.google.com/file/d/1L9xxXuYBm8Lm1gdnbwh2biJ9r9kFZsqO/view?usp=sharing)
+[Link to demonstration video](https://drive.google.com/file/d/15R0mD-dNATLspxTyb7TFCyq1TJQ2ED1a/view?usp=sharing)
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
+Future features to be added:
+* Trophy Case
+* More Categories
+* Improved answer tracker
 
 
 
