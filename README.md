@@ -126,10 +126,10 @@ From the categories page they pick how they want their knowledge to be tested. T
 
 After completing all of the levels in a category, the user is presented with a trophy for their achievements.
 
-[!Mockup1](https://drive.google.com/file/d/1x7BBnF2_KvHmYmucrCsFl4NGlP024I6L/view?usp=sharing)
-[!Mockup2](https://drive.google.com/file/d/1bWuk4pjgf_2D55STBX1Jhw7UqbTdkLzB/view?usp=sharing)
-[!Mockup3](https://drive.google.com/file/d/1L9xxXuYBm8Lm1gdnbwh2biJ9r9kFZsqO/view?usp=sharing)
-[Link to demonstration video](https://drive.google.com/file/d/15R0mD-dNATLspxTyb7TFCyq1TJQ2ED1a/view?usp=sharing)
+![Mockup1](https://drive.google.com/file/d/1x7BBnF2_KvHmYmucrCsFl4NGlP024I6L/view?usp=sharing)
+![Mockup2](https://drive.google.com/file/d/1bWuk4pjgf_2D55STBX1Jhw7UqbTdkLzB/view?usp=sharing)
+![Mockup3](https://drive.google.com/file/d/1L9xxXuYBm8Lm1gdnbwh2biJ9r9kFZsqO/view?usp=sharing)
+![Link to demonstration video](https://drive.google.com/file/d/15R0mD-dNATLspxTyb7TFCyq1TJQ2ED1a/view?usp=sharing)
 
 
 <!-- ROADMAP -->
