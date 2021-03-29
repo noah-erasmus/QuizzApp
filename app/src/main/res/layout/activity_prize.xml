@@ -65,8 +65,7 @@
             android:padding="10dp"
             android:text="select category"
             android:textStyle="bold"
-            android:textColor="@color/white"
-            android:layout_marginTop="10dp">
+            android:textColor="@color/white">
 
         </Button>
 

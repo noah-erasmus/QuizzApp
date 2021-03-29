@@ -84,24 +84,26 @@
                             android:orientation="horizontal"
                             android:layout_marginTop="5dp">
                             <ImageView
+                                android:id="@+id/cat1Trophy"
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
                                 android:src="@drawable/empty_trophy"
                                 android:layout_marginLeft="10dp"></ImageView>
                             <ImageView
+                                android:id="@+id/cat2Trophy"
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
                                 android:src="@drawable/empty_trophy"
 
                                 android:layout_marginLeft="10dp"></ImageView>
                             <ImageView
+                                android:id="@+id/cat3Trophy"
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
                                 android:src="@drawable/empty_trophy"
-
                                 android:layout_marginLeft="10dp"></ImageView>
 
-                        </LinearLayout>
+                        </LinearLayout>v
                     </LinearLayout>
                 </LinearLayout>
 

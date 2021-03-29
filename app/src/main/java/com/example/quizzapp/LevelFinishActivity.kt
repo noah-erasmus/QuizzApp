@@ -68,6 +68,7 @@ class LevelFinishActivity : AppCompatActivity() {
             answersmeter_count.text == "5"
             answersmeter_progress.setImageResource(R.drawable.answers_meter_5)
         }
+        answersmeter_count.text = rightAnswers.toString()
 
         //Store category level in shared preferences
         if(categoryNumber == 1){

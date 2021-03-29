@@ -26,6 +26,9 @@ class SelectCategoryActivity : AppCompatActivity() {
         val avatar = sharedPref.getString(Constants.AVATAR, "astronaut")
 
         //Update UI for profile card
+        val cat1Level = sharedPref.getInt(Constants.CATEGORY1_LEVEL, 0)
+        val cat2Level = sharedPref.getInt(Constants.CATEGORY2_LEVEL, 0)
+        val cat3Level = sharedPref.getInt(Constants.CATEGORY3_LEVEL, 0)
         hello_user.text = "${userName}"
         if(avatar == "astronaut"){
             user_avatar.setImageResource(R.drawable.astronaut_white)
@@ -39,6 +42,15 @@ class SelectCategoryActivity : AppCompatActivity() {
             user_avatar.setImageResource(R.drawable.shipcaptain_white)
         }else if(avatar == "concierge"){
             user_avatar.setImageResource(R.drawable.concierge_white)
+        }
+        if(cat1Level == 4){
+            cat1Trophy.setImageResource(R.drawable.full_trophy)
+        }
+        if(cat2Level == 4){
+            cat2Trophy.setImageResource(R.drawable.full_trophy)
+        }
+        if(cat3Level == 4){
+            cat3Trophy.setImageResource(R.drawable.full_trophy)
         }
 
         //Set progress indicators
@@ -61,7 +73,7 @@ class SelectCategoryActivity : AppCompatActivity() {
 
         //Total category levels from shared preferences
         totallevel_view.text = "${
-        sharedPref.getInt(Constants.CATEGORY1_LEVEL, 1) + sharedPref.getInt(com.example.quizzapp.Constants.CATEGORY2_LEVEL, 1) + sharedPref.getInt(com.example.quizzapp.Constants.CATEGORY3_LEVEL, 1)
+        sharedPref.getInt(Constants.CATEGORY1_LEVEL, 1) + sharedPref.getInt(com.example.quizzapp.Constants.CATEGORY2_LEVEL, 1) + sharedPref.getInt(com.example.quizzapp.Constants.CATEGORY3_LEVEL, 1) - 3
         }"
 
         //Navigation listener - One Word Titles
