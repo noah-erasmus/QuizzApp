@@ -127,8 +127,8 @@ From the categories page they pick how they want their knowledge to be tested. T
 After completing all of the levels in a category, the user is presented with a trophy for their achievements.
 
 ![Mockup1](images/NoahErasmus_190138_DV301_mockup1.png)
-![Mockup2](images/NoahErasmus_190138_DV301_mockup1.png)
-![Mockup3](images/NoahErasmus_190138_DV301_mockup1.png)
+![Mockup2](images/NoahErasmus_190138_DV301_mockup3.png)
+![Mockup3](images/NoahErasmus_190138_DV301_mockup2.png)
 ![Link to demonstration video](images/NoahErasmus_190138_DV301_VideoDemonstration.mp4)
 
 
